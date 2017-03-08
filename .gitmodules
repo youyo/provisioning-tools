@@ -1,3 +1,0 @@
-[submodule "tmp/yumrepo"]
-	path = tmp/yumrepo
-	url = git@github.com:youyo/provisioning-tools-recipes-yumrepo.git
