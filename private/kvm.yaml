@@ -1,0 +1,39 @@
+role: 'kvm'
+os:
+  hostname: 'suse-private-hivelocity-dev.z-hosts.com'
+  #packages: 
+  user:
+    -
+      name: "root"
+      password: "2up78djo0gu9"
+      homedir: "/root"
+      authkey:
+        generate: false
+        keypass: ""
+        publickey: ""
+  resolv:
+    - '8.8.8.8'
+    - '8.8.4.4'
+  sshd:
+    port: 10022
+    permitrootlogin: 'no'
+    passwordauth: 'no'
+zabbix:
+  agent:
+    server:
+      - '127.0.0.1'
+      - 'zbx-proxy-ngtk01.z-hosts.com'
+      - 'zbx-proxy-ngtk02.z-hosts.com'
+      - 'zbx-proxy-ngtk03.z-hosts.com'
+    allow_root: 0
+kvm:
+  nic:
+    - 
+      name: 'eth0'
+      ip: '103.55.192.85'
+      netmask: '255.255.255.248'
+      gw: '103.55.192.1'
+    - 
+      name: 'eth1'
+      ip: '127.0.0.2'
+      netmask: '255.255.255.0'

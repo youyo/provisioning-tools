@@ -1,0 +1,50 @@
+role: 'db-server/mysql'
+os:
+  hostname: 'nlinks-test-dbmanager.z-hosts.com'
+  #packages: 
+  user:
+    -
+      name: "root"
+      password: "mCNZ7Fv4Jyzp"
+      homedir: "/root"
+      authkey:
+        generate: false
+        keypass: ""
+        publickey: ""
+    -
+      name: "admin"
+      password: "mxZaqKAzDN9X"
+      homedir: "/home/admin"
+      authkey:
+        generate: false
+        keypass: ""
+        publickey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCg/o0I3plY31Cf8wp2azSCTUOqNMPITVOVPNRZi9z3OPwHVW7gha5C6QR6yqhICYP1CH/6bMKkHQgOyXOmTv1siZhR6E7kqS2zBmTrMV3R56ZvIQau4nk/4BHEgLABL5FCRGEYopUE+3+SmQOirK2ePaqb8tIWAv1jweML8/yugVRoJpGtcmTqXJo/HDYByKPuDzf+oHky8/eJWzZMHhkvRsjRipq2IL/nxY3UTkfQGUybBeLbm5rLvMAiBwYYXhOV9xG6+C/YNIonib2wWHuUDMTrvRb+XyaKCJMWeCQ+uUrNArQFVNqy2PPhomg2bUv6oYqA+2ecXIuFuy5DP4PT"
+  resolv:
+    - '8.8.8.8'
+    - '8.8.4.4'
+  sshd:
+    port: 10022
+    permitrootlogin: 'no'
+    passwordauth: 'no'
+zabbix:
+  agent:
+    server: 
+      - '127.0.0.1'
+      - 'zbx-proxy-ngtk01.z-hosts.com'
+      - 'zbx-proxy-ngtk02.z-hosts.com'
+      - 'zbx-proxy-ngtk03.z-hosts.com'
+    allow_root: 0
+mysql:
+  server:
+    password: '6yex2GuRW9AB'
+    innodb_buffer_pool_size: '3072MB'
+    innodb_log_file_size: '1024MB'
+    innodb_flush_log_at_trx_commit: 1
+    query_cache_size: '32MB'
+    query_cache_type: 1
+    tmp_table_size: '32MB'
+    max_heap_table_size: '32MB'
+    max_connections: 256
+    thread_cache_size: 256
+    server_id: 10011
+    expire_logs_days: 30

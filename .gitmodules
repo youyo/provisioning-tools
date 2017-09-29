@@ -1,0 +1,3 @@
+[submodule "cookbooks/yumrepo"]
+	path = cookbooks/yumrepo
+	url = git@github.com:youyo/provisioning-tools-recipes-yumrepo.git
